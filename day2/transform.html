@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform 2d</title>
+    <style>
+
+        .container{
+            display: flex;
+            width: 700px;
+            height: 600px;
+            margin-top:40px;
+        }
+        .container .square{
+            width: 56px;
+            height: 64px;
+            margin-right:  25px;
+            line-height: 64px;
+            text-align: center;
+            border: 2px solid rgb(235, 235, 235);
+            background-color: rgb(247, 246, 246);
+        }
+        .container .box1{
+            transform: skew(30deg);
+        }
+        .container .box2{
+            transform: scaleX(0.5);
+        }
+        .container .box3{
+            transform: rotate(45deg);
+        }
+        .container .box4{
+            transform: translate(10px, 20px);
+        }
+        .container .box5{
+            transform: skewX(30deg) scaleX(0.5)
+            rotate(45deg) translate(10px, 20px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="square">box0</div>
+        <div class="square box1">box1</div>
+        <div class="square box2">box2</div>
+        <div class="square box3">box3</div>
+        <div class="square box4">box4</div>
+        <div class="square box5">box5</div>
+    </div>
+</body>
+</html>
