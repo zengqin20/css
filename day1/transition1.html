@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单动画效果</title>
+    <style>
+        .main{
+            text-align: center;
+        }
+        h1{
+            transition: color 2s linear;
+            -moz-transition: color 2s;/*Fiexfox4*/
+            -webkit-transition: color 2s;/*Safari, Chrome*/
+            -o-transition: color 2s;/*Opera*/
+            }
+        span{
+            width: 0;
+            margin: 0 auto;
+            border-bottom:5px solid blue ;
+            display: block;
+            transition: width 1s linear;
+            -moz-transition: width 1s;/*Fiexfox4*/
+            -webkit-transition: width 1s;/*Safari, Chrome*/
+            -o-transition: width 1s;/*Opera*/
+        }
+        .slogan{
+            color: blue;
+        }
+        .underline{
+            width: 150px;
+        }
+        .btn{
+            padding: 5px 5px;
+            line-height: 30px;
+            font-size: large;
+            border-radius: 10px ;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <h1 id="slogan">前端学院<span id="underline"></span></h1>
+    <button class="btn" onclick="transform()">切换样式</button>
+</div>
+
+<script>
+
+    var index=true;
+    function transform() {
+        if(index){
+            document.getElementById("underline").classList.add('underline');
+            document.getElementById("slogan").classList.add("slogan");
+            index=false;
+        }else{
+            document.getElementById("underline").classList.remove('underline');
+            document.getElementById("slogan").classList.remove("slogan");
+            index=true;
+        }
+    }
+</script>
+</body>
+</html>
